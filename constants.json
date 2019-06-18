@@ -1,0 +1,27 @@
+{
+	"bucket": "dongle-data-dev",
+	"config-filename" : "/home/root/config.json",
+	"s3-host": "https://gmb2cob.pp.gm.com/mms/v1/objectstore/", 
+	"token": "eyJ0eXAiOiJKV1QiLCJjdHkiOm51bGwsImFsZyI6IkhTMjU2In0.eyJzdWIiOnsiZ21pbiI6ImRvbmdsZS1kYXRhLXRyYW5zZmVyLWRldiIsImdtaWQiOiIgZG9uZ2xlLWRhdGEtdHJhbnNmZXItZGV2ICIsImFjY291bnR0eXBlIjoiU3lzdGVtIiwiYXBwUm9sZSI6W119LCJpc3MiOm51bGwsImF1ZCI6bnVsbCwiZXhwIjoxNTY0NjY2NDQ4LCJpYXQiOjE1MzMxMzA0NDgsImp0aSI6IjhjZjcwZmRjLTAwYzEtNGU2Yi04OWI2LTYzZDZlZmFjOWExOCJ9.bBi9wZ5f5vvj2TMqd0Vh2oh0QoW_3Tp6dpjzvZOX4fk",
+	"certificate-filename": "/home/root/cvgw0001.gm.com.pem",
+	"key-filename": "/home/root/cvgw0001.gm.com.key",
+	"min-msg-in-chunk": 1024,
+	"CAN-bus-mapping": [
+		{
+			"ifindex": 0, 
+			"can-bus": "FO"
+		},
+		{
+			"ifindex": 1,
+			"can-bus": "LS"
+		},
+		{
+			"ifindex": 2,
+			"can-bus": "HS"
+		} ,
+		{
+			"ifindex": 3,
+			"can-bus": "CE"
+		}
+	]
+}
