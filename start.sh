@@ -106,9 +106,9 @@ chmod +x CVDP-C
 
 SD_CARD=/run/media/mmcblk1p1
 if [ -d "$SD_CARD" ]; then 
-	./CVDP-C >> /run/media/mmcblk1p1/cvdp_stderr.txt 2>&1 & 
+	./CVDP-C -P on >> /run/media/mmcblk1p1/cvdp_stderr.txt 2>&1 & 
 else
-	./CVDP-C >> /dev/null 2>&1 & 
+	./CVDP-C -P on >> /dev/null 2>&1 & 
 fi
 cd -
 
