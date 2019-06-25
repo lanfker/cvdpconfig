@@ -1,61 +1,44 @@
 {
-    "can-logging":"local",
-    "min-msg-in-chunk": 1024,
+    "can-logging": "remote", 
+    "time-zone":"America/Detroit",
+    "min-msg-in-chunk": 4096,
     "RxCAN": [
         {
             "hs_config": [
-                "id=0x1e9",
-                "id=0xf1",
-                "id=0x1f5",
-                "id=0x12a",
-                "id=0x3e9",
+                "id=0x287",
+                "id=0x3E9",
                 "id=0x140",
-                "id=0x17d",
-                "id=0xc9",
-                "id=0x1a1",
-                "id=0x120",
-                "id=0x1e5",
-                "id=0x32a"
+                "id=0x3D1",
+                "id=0xF1",
+                "id=0x321",
+                "id=0xC5",
+                "id=0xC1",
+                "id=0x500",
+                "id=0x17D",
+                "id=0x1E5",
+                "id=0x1E9"
             ],
             "ls_config": [
-                "id=0x10ec4040",
-                "id=0x10ec8040",
-                "id=0x10242040",
+                "id=0x10EC4040",
+                "id=0x10EC8040",
+                "id=0x102AA097",
+                "id=0x10428040",
+                "id=0x102AC097",
+                "id=0x10760080",
+                "id=0x1020C040",
                 "id=0x102A8097",
-                "id=0x102cc040",
+                "id=0x102CA040",
+                "id=0x106C0040",
                 "id=0x10424040",
-                "id=0x1020c040"
+                "id=0x10708040",
+                "id=0x10242040"
             ],
-            "fo_config": [],
-            "ce_config": [
-                "id=0x451",
-                "id=0x452",
-                "id=0x453",
-                "id=0x454",
-                "id=0x457",
-                "id=0x458",
-                "id=0x459",
-                "id=0x45C",
-                "id=0x45E",
-                "id=0x460",
-                "id=0x461",
-                "id=0x462"
-            ]
-        }
-    ],
-    "CAM":[
-        {
-            "name":"front",
-            "resolution":"640x480",
-            "fps":15,
-            "logging-mode":"local"
-        },
-        {
-            "name":"inside-view",
-            "resolution":"640x480",
-            "fps":15,
-            "logging-mode":"local"
+            "upload_beeps": {
+                "chunk_beeps": 0,
+                "commit_beeps": 5
+            }, 
+            "report_addr":"omer.tsimhoni@gm.com"
         }
     ]
-
 }
+
