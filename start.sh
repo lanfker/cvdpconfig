@@ -1,5 +1,7 @@
 #!/bin/sh
 
+chmod -R 755 /home/root/
+
 ## Quickly make sure the AP offered by CVDP accepts incoming connections
 /etc/init.d/dnsmasq start 
 
@@ -48,6 +50,10 @@ fi
 READ_WIFI=true
 WIFI_READER=/home/root/cvdp
 if [[ "$READ_WIFI" = true && -f "$WIFI_READER" ]]; then
+    TMP_WPACONFIG=/home/root/wpa_supplicant.conf
+    if [ -f "$TMP_WPACONFIG" ]; then 
+        rm /home/root/wpa_supplicant.conf
+    fi
     ### Let the wifi reader handle SSID connection
     /home/root/cvdp
 
@@ -59,7 +65,7 @@ then
 else
     ### Start Wi-Fi...
     echo "wifi reader failed, use default configuration instead"  
-/usr/sbin/wpa_supplicant -B -P /var/run/wpa_supplicant.wlan0.pid -i wlan0 -c /etc/wpa_supplicant.conf -D nl80211 
+	/usr/sbin/wpa_supplicant -B -P /var/run/wpa_supplicant.wlan0.pid -i wlan0 -c /etc/wpa_supplicant.conf -D nl80211 
 fi
 
 dhclient wlan0 
@@ -100,9 +106,9 @@ chmod +x CVDP-C
 
 SD_CARD=/run/media/mmcblk1p1
 if [ -d "$SD_CARD" ]; then 
-	./CVDP-C -u on >> /run/media/mmcblk1p1/cvdp_stderr.txt 2>&1 & 
+	./CVDP-C -u >> /run/media/mmcblk1p1/cvdp_stderr.txt 2>&1 & 
 else
-	./CVDP-C -u on >> /dev/null 2>&1 & 
+	./CVDP-C -u >> /dev/null 2>&1 & 
 fi
 cd -
 
